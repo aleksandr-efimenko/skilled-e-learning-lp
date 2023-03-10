@@ -15,16 +15,16 @@ body {
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(236, 100%, 97%) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
 }
 
-header {
-}
+header {}
 
 main {
     margin: 0 10.3125rem;
+    display: grid;
+    grid-template-columns: 1;
+    place-items: center;
 }
 
 footer {
@@ -40,7 +40,9 @@ footer {
     min-width: 70rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 800;
 }
 
@@ -66,13 +68,13 @@ p {
     font-weight: 500;
 }
 
+
 .hero {
     display: flex;
-    min-height: 25rem;
 }
 
 .hero-text-container {
-    margin: 12.25rem 0 14.125rem;
+    margin: 8.25rem 0 14.125rem;
     width: 28.5rem;
 }
 
@@ -87,10 +89,12 @@ p {
 .hero-img {
     background-image: url('./assets/image-hero-desktop.webp');
     width: 1000px;
-    height: 1000px;
-    position: absolute;
+    height: 800px;
+    position: relative;
     z-index: -1;
-    left: 49rem;
+    right: 0;
+    top: 0;
+    /* left: 49rem; */
     top: -9.1331rem;
 }
 
