@@ -19,15 +19,47 @@
     --fs-heading-l: 2.5rem;
     --fs-heading-m: 2rem;
     --fs-heading-s: 1.5rem;
+    --fs-heading-ss: 1.25rem;
     --fs-body-m: 1.125rem;
     --fs-body-s: 1rem;
+
+    --fs-h1: var(--fs-heading-xl);
+    --fs-h2: var(--fs-heading-m);
+    --fs-h3: var(--fs-heading-s);
+    --fs-body-paragraph: var(--fs-body-m);
+    --fs-body-anchor: var(--fs-body-m);
 
     --lh-heading-xl: 4.375rem;
     --lh-heading-l: 3.1875rem;
     --lh-heading-m: 2.5rem;
     --lh-heading-s: 1.75rem;
-    --lh-body-m: var(--fh-heading-s);
-    --lh-body-s: var(---fh-heading-s);
+    --lh-body-s: 1.625rem;
+
+    --lh-h1: var(--lh-heading-xl);
+    --lh-h2: var(--lh-heading-m);
+    --lh-h3: var(--lh-heading-s);
+    --lh-body-paragraph: var(--lh-heading-s);
+    --lh-body-anchor: var(--lh-heading-s);
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+    :root {
+        --fs-h1: var(--fs-heading-l);
+        --fs-h2: var(--fs-heading-s);
+        --fs-h3: var(--fs-heading-ss);
+        --fs-body-paragraph: var(--fs-body-s);
+
+        --lh-h1: var(--lh-heading-l);
+        --lh-h2: var(--lh-heading-s);
+        --lh-h3: var(--lh-heading-ss);
+        --lh-body-paragraph: var(--lh-body-s);
+    }
+}
+
+/* Mobile */
+@media (min-width: 23.4375rem) {
+
 }
 
 body {
@@ -65,25 +97,26 @@ h3 {
 }
 
 h1 {
-    font-size: var(--fs-heading-xl);
-    line-height: var(--lh-heading-xl);
     color: var(--headers-color);
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
 }
 
 h2 {
-    font-size: var(--fs-heading-m);
-    line-height: var(--lh-heading-m);
+    font-size: var(--fs-h2);
+    line-height: var(--lh-h2);
 }
 
 h3 {
-    font-size: var(--fs-heading-s);
-    line-height: var(--lh-heading-s);
+    font-size: var(--fs-h3);
+    line-height: var(--lh-h3);
 }
 
 p {
     color: var(--text-color);
-    font-size: var(--fs-body-m);
+    font-size: var(--fs-body-paragraph);
     font-weight: var(--fw-regular);
+    line-height: var(--lh-body-paragraph);
 }
 
 
@@ -141,16 +174,13 @@ p {
 }
 
 .card a {
+    color: var(--dark-pink);
+    font-weight: var(--fw-body);
+    font-size: var(--fs-body-anchor);
+    line-height: var(--lh-body-anchor);
     position: absolute;
     bottom: 2.5rem;
-    /* display: block; */
-    /* margin-top: 3.25rem; */
-    color: var(--dark-pink);
     text-decoration: none;
-    font-style: normal;
-    font-weight: var(--fw-body);
-    font-size: var(--fs-body-m);
-    line-height: var(--lh-body-m);
 }
 
 .card a:hover {
@@ -160,12 +190,11 @@ p {
 .btn1,
 .btn2,
 .btn3 {
+    font-family: var(--ff-primary);
     color: var(--white);
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: var(--fw-body);
-
-    font-size: var(--fs-body-m);
-    line-height: var(--lh-body-m);
+    font-size: var(--fs-body-paragraph);
+    line-height: var(--lh-body-paragraph);
     border-radius: 1.75rem;
     border: transparent;
     padding: .875rem 1.9375rem;
@@ -198,3 +227,4 @@ p {
     cursor: pointer;
     background: linear-gradient(0deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.5)), linear-gradient(180deg, hsl(237, 100%, 64%) -54.32%, hsl(322, 87%, 55%) 100%);
 }
+
