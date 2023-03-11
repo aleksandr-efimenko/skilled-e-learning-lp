@@ -8,14 +8,32 @@
     --light-pink: hsl(341, 100%, 83%);
     --white: hsl(0, 0%, 100%);
     --bg-color: hsl(0, 0%, 95%);
+
+    --ff-primary: 'Plus Jakarta Sans', sans-serif;
+
+    --fw-regular: 500;
+    --fw-body: 700;
+    --fw-heading: 800;
+
+    --fs-heading-xl: 3.5rem;
+    --fs-heading-l: 2.5rem;
+    --fs-heading-m: 2rem;
+    --fs-heading-s: 1.5rem;
+    --fs-body-m: 1.125rem;
+    --fs-body-s: 1rem;
+
+    --lh-heading-xl: 4.375rem;
+    --lh-heading-l: 3.1875rem;
+    --lh-heading-m: 2.5rem;
+    --lh-heading-s: 1.75rem;
+    --lh-body-m: var(--fh-heading-s);
+    --lh-body-s: var(---fh-heading-s);
 }
 
 body {
     min-height: 100vh;
-    margin: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--ff-primary);
     background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(236, 100%, 97%) 100%);
-
 }
 
 header {}
@@ -43,29 +61,29 @@ footer {
 h1,
 h2,
 h3 {
-    font-weight: 800;
+    font-weight: var(--fw-heading);
 }
 
 h1 {
-    font-size: 3.5rem;
-    line-height: 4.375rem;
+    font-size: var(--fs-heading-xl);
+    line-height: var(--lh-heading-xl);
     color: var(--headers-color);
 }
 
 h2 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: var(--fs-heading-m);
+    line-height: var(--lh-heading-m);
 }
 
 h3 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    font-size: var(--fs-heading-s);
+    line-height: var(--lh-heading-s);
 }
 
 p {
     color: var(--text-color);
-    font-size: 1.125rem;
-    font-weight: 500;
+    font-size: var(--fs-body-m);
+    font-weight: var(--fw-regular);
 }
 
 
@@ -76,10 +94,6 @@ p {
 .hero-text-container {
     margin: 8.25rem 0 14.125rem;
     width: 28.5rem;
-}
-
-.hero-text-container h1 {
-    margin: 0;
 }
 
 .hero-text-container p {
@@ -104,18 +118,12 @@ p {
     grid-template-columns: repeat(3, 21.875rem);
     column-gap: 1.875rem;
     row-gap: 3.5rem;
-    border-radius: 15px;
     margin-bottom: 8.75rem;
 }
 
 .main-card {
     background: linear-gradient(180deg, hsl(13, 100%, 64%) 0%, hsl(322, 87%, 55%) 100%);
-    border-radius: .9375rem;
     color: var(--white);
-}
-
-.main-card h2 {
-    margin: 0;
 }
 
 .card {
@@ -132,10 +140,6 @@ p {
     width: 3.5rem;
 }
 
-.card h3 {
-    margin: 0;
-}
-
 .card a {
     position: absolute;
     bottom: 2.5rem;
@@ -144,9 +148,9 @@ p {
     color: var(--dark-pink);
     text-decoration: none;
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
+    font-weight: var(--fw-body);
+    font-size: var(--fs-body-m);
+    line-height: var(--lh-body-m);
 }
 
 .card a:hover {
@@ -158,9 +162,10 @@ p {
 .btn3 {
     color: var(--white);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-weight: var(--fw-body);
+
+    font-size: var(--fs-body-m);
+    line-height: var(--lh-body-m);
     border-radius: 1.75rem;
     border: transparent;
     padding: .875rem 1.9375rem;
