@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Skilled e-learning landing page</title>
 </head>
 
 <body>
-  <header>
+  <header class="p-header">
     <div class="container">
       <div class="nav-wrapper">
         <div class="logo">
@@ -25,21 +24,28 @@
     </div>
   </header>
   <main>
-    <section>
-      <div class="container hero">
-        <h1>Maximize skill, minimize budget</h1>
-        <p class="main-description">
-          Our modern courses across a range of in-demand skills will give you the
-          knowledge you need to live the life you want.
-        </p>
-        <button class="buttton btn2">Get Started</button>
-      </div>
-      <div class="hero-img">
-        <!-- <img src="./assets/image-hero-desktop.webp" alt="Hero image"> -->
+    <section class="padding-block-900">
+      <div class="container hero even-columns">
+        <div class="hero-text">
+          <h1>Maximize skill, minimize budget</h1>
+          <p class="main-description">
+            Our modern courses across a range of in-demand skills will give you the
+            knowledge you need to live the life you want.
+          </p>
+          <button class="buttton btn2">Get Started</button>
+        </div>
+        <div class="hero-img">
+          <picture>
+            <source media="(max-width: 23.4375rem)" srcset="assets/image-hero-mobile.webp">
+            <source media="(max-width: 48rem)" srcset="./assets/image-hero-tablet.webp">
+            <source media="(min-width: 48.0625rem)" srcset="./assets/image-hero-desktop.webp">
+            <img src="./assets/image-hero-desktop.webp" alt="Hero image">
+          </picture>
+        </div>
       </div>
     </section>
 
-    <section>
+    <section class="padding-block-900">
       <div class="container cards">
         <div class="card main-card">
           <h2>Check out our most popular courses!</h2>
