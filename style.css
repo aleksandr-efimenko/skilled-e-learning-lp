@@ -32,7 +32,7 @@
     --lh-heading-xl: 4.375rem;
     --lh-heading-l: 3.1875rem;
     --lh-heading-m: 2.5rem;
-    --lh-heading-s: 1.75rem;
+    --lh-heading-s: 2rem;
     --lh-heading-xs: 1.575rem;
 
     --lh-body-s: 1.625rem;
@@ -92,9 +92,14 @@ footer {
 }
 
 .logo-container {
-
     padding: 2rem;
     min-width: 70rem;
+}
+
+.logo img {
+    margin-block: .4375rem .375rem;
+    width: 7.125rem;
+
 }
 
 h1,
@@ -138,7 +143,7 @@ p {
     align-items: center;
 }
 
-.even-columns {
+.hero-container {
     display: grid;
     gap: var(--size-400);
 
@@ -234,7 +239,9 @@ p {
     line-height: var(--lh-body-paragraph);
     border-radius: 1.75rem;
     border: 0;
-    padding: .875rem 1.9375rem;
+    /* padding: .875rem 1.9375rem; */
+    width: 10.4375rem;
+    height: 3.5rem;
 }
 
 .btn1 {
@@ -249,7 +256,7 @@ p {
 .btn2 {
     background: linear-gradient(180deg, hsl(13, 100%, 64%) 0%, hsl(322, 87%, 55%) 100%);
     border-radius: 31.5px;
-    padding: 1.1875rem 2rem 1rem;
+    height: 3.9375rem;
 }
 
 .btn2:hover {
@@ -264,7 +271,7 @@ p {
     background: linear-gradient(0deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.5)), linear-gradient(180deg, hsl(237, 100%, 64%) -54.32%, hsl(322, 87%, 55%) 100%);
 }
 
-.padding-block-900 {
+.padding-block, .padding-block-900 {
     padding-block: var(--size-900);
 }
 
@@ -281,22 +288,69 @@ p {
         --lh-h3: var(--lh-heading-xs);
         --lh-body-paragraph: var(--lh-body-s);
     }
+    .logo {
+        margin-block: 11px 5px;
+    }
+    .logo img {
+        width: 85px;
+    }
 
+    .hero-container {
+        gap: 0;
+        grid-template-columns: 60% 40%;
+    }
+
+    .hero-text {
+        margin-block: 1.875rem 6.5rem;
+        margin-inline-end: initial;
+    }
+
+    .hero-text p {
+        margin-block: 1.625rem 1.4375rem;
+    }
+    .hero-img img {
+        top: -14.5625rem;
+        left: -83px;
+    }
     .cards {
-        grid-template-rows: repeat(3, 20.125rem);
-        grid-template-columns: repeat(2, 21.875rem);
+        grid-template-rows: repeat(3, 16.1875rem);
+        grid-template-columns: repeat(2, 21.1875rem);
         column-gap: .625rem;
         row-gap: 3.5rem;
+    }
+    .card {
+        padding: 3.5rem 2rem;
+        border-radius: .625rem;
+    }
+
+    .buttton {
+        height: 3rem;
+        width: 8.75rem;
+    }
+
+    .btn2 {
+        height: 3.5rem;
+        width: 10.4375rem;
+    }
+
+    .padding-block {
+        padding-block: var(--size-600);
     }
 }
 
 /* Mobile */
-@media (max-width: 37.5rem) {
+@media (max-width: 43.75rem) {
     .cards {
         grid-template-rows: 16.1875rem;
         grid-template-columns: 21.4375rem
     }
+
     .container {
         --side-margins: 1rem;
+    }
+
+    .hero-container {
+        gap: 0;
+        grid-template-columns: 1fr;
     }
 }
